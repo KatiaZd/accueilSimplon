@@ -1,0 +1,637 @@
+/* VARIABLES */
+
+:root {
+    --lightBlue: #F1F5F8;
+    --red: #CF3034;
+}
+
+/* GENERAL */
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--lightBlue);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    color: var(--red);
+    font-size: 24px;   
+    line-height: 27.22px; 
+    margin: 20px 16px 7px 16px; 
+}
+
+h2 {
+    font-size: 30px;
+    margin: 50px 20px; 
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4{
+    color: white;
+    font-size: 24px; /*Changement au format desktop à faire*/
+    font-weight: 700;
+}
+
+.sizeText {
+    font-size: 16px;
+}
+
+/* HEADER */
+
+/* Menu burger */
+
+.burger {
+    display: block;
+    cursor: pointer;
+    margin: 31px 16px 0 0;
+}
+
+.bar {
+    display: block;
+    width: 40px;
+    height: 6px;
+    border-radius: 61px;
+    margin: 5px;
+    background-color: var(--red);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.burger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.burger.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}  
+
+/* Div container */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.navItem {
+    list-style: none;
+    margin: 57px 0; 
+} 
+
+a img {
+    margin-left: 17px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 19px;
+}
+
+/* Navbar */
+
+.flex-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.navHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLinks {
+    margin-top: 98px;           /* 118-20 */
+    overflow: hidden;
+    height: 0;
+}
+
+.active {                   /* JS */
+    height: 100vh;
+} 
+
+hr {
+    display: none;
+}
+
+/* Version desktop */
+
+@media (min-width: 1059px) {
+    .burger {
+        display: none;
+    }
+
+    .flexNav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .navHeader {
+        display: flex;
+    }
+
+    .navLinks {
+        height: auto;
+        margin-top: 0;
+    }
+
+    .navItem {
+        display: inline-block;
+        margin: 40px auto;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    a{
+        margin-right: 57px;
+    }
+
+    .last {
+        margin-right: 5px;
+    }
+
+    hr {
+        display: block;
+        border: 1px solid white; 
+        width: 83%;
+        margin: 2px 0px 39px 123px;
+        background-color: white;  
+    } 
+}  
+
+/* SECTION 1 - PRESENTATION */
+
+.presentation {
+    height: 73.5vh; 
+    background-color: white;  
+}
+
+.imgLogo {
+    width: 300px;
+    height: 102px;
+    margin: 31px 98px 20px 16px;
+}
+
+.presentation p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24.55px;
+    margin-bottom: 36px;
+    margin: 0px 16px 36px 16px;
+}
+
+.presentation-Btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Boutons */
+
+.presentation-Btn {
+    margin: 0;
+}
+
+.presentation-Btn a {
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 14px 127px 13px 127px;  
+}
+
+.btn {
+    background-color: var(--red);
+    color: white;
+    margin-bottom: 15px;
+}
+
+.presentation-Btn .btnHover {
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    margin-bottom: 31px;
+}
+
+.imgPresentation {
+    display: none;
+}
+
+/* Version desktop */
+
+@media (min-width: 1059px) {
+
+    /* Section principale */
+    .presentation {
+        margin: 39px 122px 100px 122px;
+        display: flex;
+    }
+
+    /* Div container */
+    .contener {
+        width: 50%;
+    }
+
+    .conteneurImg {
+        width: 578px;
+        height: 424px;
+    }
+    .imgPresentation {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: white;    
+    }
+
+    /* Boutons */
+    .presentation-Btn {
+        display: flex;
+        flex-direction: row;
+        margin-top: 49px;
+        gap: 19px;
+    }
+    .presentation-Btn a {
+        padding: 14px 32px 13px 32px;
+    }
+
+    .presentation-Btn .btn {
+        margin-bottom: 31px;
+    }
+}
+
+
+
+/* SECTION 2 - NOTRE IMPACT */
+
+
+.containerImpact {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin: 20px 16px 50px 16px;
+    background: white;
+}
+
+.boxImpact {
+    /* Pas de width pour que les boxs prennent 
+    la largeur à disposition et d'adapte en responsive  */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 11px;
+    border: 4px solid var(--lightBlue)
+}
+
+.boxImpact img {
+    width: 33.78px;
+    align-self: flex-end;
+    margin-right: 10.28px;
+    margin-bottom: 10.28px;
+}
+
+
+.backgRed {
+    background-color: var(--red);
+    color: white;
+    justify-content: center;
+}
+
+.boxImpact .backgRed img {
+    color: white;
+    height: 50px;
+    width: 43.78px;
+    justify-self: flex-end; 
+    align-self: center
+     
+}
+.numberImpact {
+    color: var(--red);
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700;
+    margin-top: 31px;
+}
+
+.fontImpact {
+    font-size: clamp(24px, 5vw, 18px);
+    font-weight: 400;
+}
+
+.fontRed{
+    font-size: 24px;
+    align-self: center;
+    padding: 69px 19px 46px 19px;
+}
+
+/* Version desktop */
+
+@media (min-width: 1059px) {
+
+    h2 {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-left: 122px;
+    }
+
+    .impact {
+        display: grid;
+        justify-content: center;
+    }
+
+
+    .containerImpact {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .boxImpact {
+        width: 197px;
+        height: 254px;  
+    }
+}
+
+/* SECTION 3 - TEMOIGNAGES */
+
+.temoignages {
+    background-color: white;  
+}
+
+/* Div principale de la section */
+.containerTemoignages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px 0 16px;
+}
+
+/* Img de l'apprenant */
+.imgTemoignages {
+    display: none;
+}
+
+/* Div des textes */
+.textTemoignages img {
+    margin: 15px 0 21px 0;
+}
+
+.longText {
+    margin-bottom: 9px ;
+}
+
+.legendText {
+    margin-bottom: 33.12px;
+    font-weight: 600;
+}
+
+/* Caroussel */
+.carrussel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.numberTemoignages {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 10px 56.64px 18px 58.64px;
+}
+
+
+/* SECTION 4 - APPRENTIS SIMPLON */
+
+.apprentisSimplon {
+    height: 380px;
+    background-color: white;
+
+}
+
+.conteneurImgApprentis {
+    height: 144px;
+}
+
+.conteneurImgApprentis img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.textApprentis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px 0 16px;
+}
+
+.textApprentis p {
+    margin-bottom: 30px;
+}
+
+.textApprentis .btn {
+    padding: 14px 131px 13px 131px;
+    border-radius: 6px;
+}
+
+@media (min-width: 1059px) {
+    /* .conteneurImgApprentis {
+        height: 375px;
+    } */
+}
+
+/* SECTION 5 - ILS NOUS SOUTIENNENT */
+
+
+:root {
+    --soutiens-width: 80vw;
+    --soutiens-height: 20vh;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --soutiens-elements-displayed: 5;
+    --soutiens-element-width: calc(var(--soutiens-width) / var(--soutiens-elements-displayed));
+    --soutiens-animation-duration: calc(var(--soutiens-elements) * 3s);
+  }
+
+
+.soutiens {
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.soutiens:before, .soutiens:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.soutiens:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+  }
+  .soutiens:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+  }
+
+  .soutiensContent {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--soutiens-animation-duration) linear infinite;
+  }
+
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--soutiens-element-width) * var(--soutiens-elements))); }
+  }
+
+  .soutiensContent li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    width: var(--soutiens-element-width);
+    max-height: 100%;
+    font-size: calc(var(--soutiens-height)*3/4); /* 5rem; */
+    white-space: nowrap;
+} 
+
+.soutiensContent li img {
+    width: 100%;
+    height: 100%; 
+    border: 2px solid #eee;
+  }
+
+
+
+/* FOOTER */
+
+footer {
+    background: var(--red);
+    padding: 18px;
+}
+
+footer p {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 19px;
+}
+
+/* Input mail */
+
+input {
+    border: 1px solid white;
+    background: var(--red);
+    width: 80%;
+    padding: 7px;
+}
+
+::placeholder {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+footer button {
+    padding: 8px;
+    margin-left: -5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar du footer  */
+
+.navmenuFooter {
+    margin: 21px 0 52px 0
+}
+
+.navmenuFooter li {
+    margin-bottom: 18px;
+}
+
+.navmenuFooter a {
+    color: white;
+}
+
+.noneFooter {
+    display: none;
+}
+
+/* Réseaux sociaux */
+
+.iconeRs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 44px;
+}
+
+.iconeRs img {
+    margin-right: 20.3px ;
+}
+
+/* Logo footer */
+
+.logoFooter {
+    display: block;
+    margin: auto auto 53px auto;
+}
+
+/* Version desktop */
+@media (min-width: 1059px) {
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .navmenuFooter {
+        display: flex;
+        margin: auto;
+    }
+
+    .itemFooter a {
+        margin-right: 29px;
+    }
+
+    .noneFooter {
+        display: block;
+        color: white;
+        height: 28px;
+        margin-right: 28px;
+    }
+
+    .headerFooter {
+        position: absolute;
+        top: 37px;
+        right: 366px;
+    }
+
+    .logoFooter {
+        display: block;
+        margin: auto auto 60px 335px;
+        padding-top: 33px;
+    }
+}
