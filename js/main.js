@@ -9,7 +9,7 @@ burger.addEventListener("click", () => {
 })
 
 
-//CAROUSEL
+//CAROUSEL - SECTION 5
 
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--soutiens-elements-displayed");
