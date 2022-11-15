@@ -131,7 +131,7 @@ hr {
     display: none;
 }
 
-/* Version desktop */
+/* Header -  desktop */
 
 @media (min-width: 1059px) {
     .burger {
@@ -238,7 +238,7 @@ hr {
     display: none;
 }
 
-/* Version desktop */
+/* Section 1 - desktop */
 
 @media (min-width: 1059px) {
 
@@ -343,7 +343,7 @@ hr {
     padding: 69px 19px 46px 19px;
 }
 
-/* Version desktop */
+/* Section 2 - desktop */
 
 @media (min-width: 1059px) {
 
@@ -416,6 +416,14 @@ hr {
     margin: 10px 56.64px 18px 58.64px;
 }
 
+/* Section 3 - destkop */
+@media (min-width: 1059px) {
+    .imgTemoignages {
+        display: block;
+    }
+
+}
+
 
 /* SECTION 4 - APPRENTIS SIMPLON */
 
@@ -457,8 +465,8 @@ hr {
     } */
 }
 
-/* SECTION 5 - ILS NOUS SOUTIENNENT */
 
+/* SECTION 5 - ILS NOUS SOUTIENNENT */
 
 :root { 
     --soutiens-width: 80vw;
@@ -539,7 +547,7 @@ hr {
     margin-left: 36.64px;
 }
 
-/* Version destkop */
+/* Section 5 - destkop */
 
 @media (min-width: 1059px) {
 
@@ -548,10 +556,6 @@ hr {
         height: 100px; 
     }
 }
-
-
-
-
 
 /* FOOTER */
 
@@ -626,7 +630,7 @@ footer button {
     margin: auto auto 53px auto;
 }
 
-/* Version desktop */
+/* Footer - desktop */
 @media (min-width: 1059px) {
     footer {
         display: flex;
