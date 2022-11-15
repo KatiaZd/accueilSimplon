@@ -539,6 +539,19 @@ hr {
     margin-left: 36.64px;
 }
 
+/* Version destkop */
+
+@media (min-width: 1059px) {
+
+    .soutiensContent li img {
+        width: 100px;
+        height: 100px; 
+    }
+}
+
+
+
+
 
 /* FOOTER */
 
