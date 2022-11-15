@@ -49,6 +49,67 @@ h4{
     font-size: 16px;
 }
 
+/* LOADER */
+
+.loader {
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    /*Pour fixer la position*/
+    z-index: 2;
+    background-color: #f2f2f2;
+    /*En rgbA pour l'opacité*/
+    opacity: 0.9;
+    animation: 1s linear 2s 1 normal both running stopLoader;
+  }
+  .loader:after {
+    content: "";
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    border: 15px solid var(--red);
+    width: 100px;
+    height: 100px;
+    border-top-color: var(--red);
+    border-bottom-color: black;
+    border-radius: 50%;
+    animation: 3s linear 0s infinite reverse both running infiniteRotate;
+    display: block;
+  }
+  @keyframes infiniteRotate {
+    0% {
+      transform: rotate(0deg) scale(1);
+      border-top-color: var(--red);
+      border-bottom-color: black;
+    }
+    25% {
+      border-top-color: black;
+      border-bottom-color: var(--red);
+    }
+    50% {
+      transform: rotate(360deg) scale(1.13);
+      border-top-color: var(--red);
+      border-bottom-color: black;
+    }
+    75% {
+      border-top-color: black;
+      border-bottom-color: var(--red);
+    }
+    100% {
+      transform: rotate(720deg) scale(1);
+      border-top-color: var(--red);
+      border-bottom-color: black;
+    }
+  }
+  @keyframes stopLoader {
+    100% {
+      opacity: 0;
+      overflow: hidden;
+      z-index: -1000;
+    }
+  }
+
+
 /* HEADER */
 
 /* Menu burger */
@@ -103,6 +164,10 @@ a {
     text-decoration: none;
     font-size: 18px;
     margin-top: 19px;
+}
+
+a:hover {
+    color: var(--red);
 }
 
 /* Navbar */
@@ -607,6 +672,10 @@ footer button {
     color: white;
 }
 
+.navmenuFooter li:hover {
+    transform: scale(1.10);
+}
+
 .noneFooter {
     display: none;
 }
@@ -620,7 +689,8 @@ footer button {
 }
 
 .iconeRs img {
-    margin-right: 20.3px ;
+    margin-right: 20.3px;
+    cursor: pointer;
 }
 
 /* Logo footer */
